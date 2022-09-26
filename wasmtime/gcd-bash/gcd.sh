@@ -5,7 +5,7 @@ function gcd() {
   local x=$(($1))
   local y=$(($2))
   # Invoke GCD from module; supress stderr
-  local result=$(wasmtime gcd.wat --invoke gcd $x $y 2>/dev/null)
+  local result=$(wasmtime ../gcd.wat --invoke gcd $x $y 2>/dev/null)
   echo "$result"
 }
 
